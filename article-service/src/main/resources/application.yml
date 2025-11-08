@@ -1,0 +1,17 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:mysql}:${MYSQL_PORT:3306}/${MYSQL_DB:cs4297}?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    username: ${MYSQL_USER:cs4297}
+    password: ${MYSQL_PASS:cs4297}
+  kafka:
+    bootstrap-servers: ${KAFKA_BROKER:kafka:9092}
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+app:
+  kafka-topic: ${KAFKA_TOPIC:articles}
+  poll-interval-ms: 5000

@@ -1,0 +1,15 @@
+plugins {
+    id 'application'
+}
+
+dependencies {
+    implementation 'org.jsoup:jsoup:1.17.2'
+    implementation 'mysql:mysql-connector-java:8.0.33'
+    implementation 'org.slf4j:slf4j-api:2.0.12'
+    runtimeOnly  'org.slf4j:slf4j-simple:2.0.12'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
+}
+
+application {
+    mainClass = 'ie.ul.cs4297.crawler.CrawlerApp'
+}

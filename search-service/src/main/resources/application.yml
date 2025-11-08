@@ -1,0 +1,26 @@
+server:
+  port: 8082
+
+app:
+  es-host: http://elasticsearch:9200
+  es-index: articles
+  # optional tweak: default page size for /search when size not provided
+  default-size: 10
+
+spring:
+  datasource:
+    url: jdbc:mysql://mysql:3306/cs4297?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC&characterEncoding=utf8
+    username: cs4297
+    password: cs4297
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jdbc:
+    template:
+      fetch-size: 1000
+      max-rows: 10000
+  application:
+    name: search-service
+
+logging:
+  level:
+    root: INFO
+    ie.ul.cs4297: DEBUG

@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+spring:
+  kafka:
+    bootstrap-servers: kafka:9092
+    consumer:
+      group-id: indexer-group-6
+      auto-offset-reset: earliest
+      enable-auto-commit: true   # <-- change to true
+
+app:
+  kafka-topic: articles
+  es-host: http://elasticsearch:9200
+  es-index: articles
+  bulk-size: 200
