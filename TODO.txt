@@ -1,0 +1,5 @@
+1. Create the GET /api/search?q=query_term endpoint.
+2. Query DSL: Execute an ElasticSearch multi_match query targeting the title and content fields. 
+3. Relevance: The API must return the _score to explain result ranking.
+4. Create the GET /api/analytics/tags endpoint. 
+5. Query DSL: Execute an ElasticSearch Terms Aggregation on the tags field to return the top 5 most frequent tags.
