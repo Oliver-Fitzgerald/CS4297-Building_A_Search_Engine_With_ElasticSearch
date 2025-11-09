@@ -15,4 +15,4 @@ CREATE TABLE IF NOT EXISTS articles (
     ) ENGINE=InnoDB;
 
 -- Helpful index for title searches
-CREATE INDEX IF NOT EXISTS idx_articles_title ON articles(title);
+CREATE INDEX idx_articles_title ON articles(title);

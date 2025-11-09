@@ -95,8 +95,6 @@ services:
       KAFKA_TOPIC: ${KAFKA_TOPIC:-articles}
       ES_HOST: ${ES_HOST:-http://elasticsearch:9200}
       ES_INDEX: ${ES_INDEX:-articles}
-    ports:
-      - "8082:8080"
 
   search-service:
     build:
