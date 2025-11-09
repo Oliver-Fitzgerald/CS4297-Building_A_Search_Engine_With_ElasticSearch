@@ -1,0 +1,2 @@
+rootProject.name = 'CS4297-Week10-LAB'
+include 'crawler', 'article-service', 'indexer', 'search-service'
